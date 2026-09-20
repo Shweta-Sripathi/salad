@@ -19,7 +19,7 @@ export default function Hero() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center overflow-hidden pt-24"
+      className="relative min-h-[calc(100svh-5rem)] md:min-h-screen flex items-center overflow-hidden pt-14 md:pt-24"
     >
       <div className="grain-overlay" />
 
