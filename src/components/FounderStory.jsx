@@ -15,7 +15,7 @@ export default function FounderStory() {
     <section id="founder" className="relative py-28 md:py-36 bg-cream-deep overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-sage/10 organic-blob blur-3xl" />
 
-      <div className="container-custom grid grid-cols-[0.82fr_1.18fr] lg:grid-cols-[0.85fr_1.15fr] gap-5 md:gap-10 lg:gap-16 items-center relative">
+      <div className="container-custom grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-8 md:gap-10 lg:gap-16 items-center relative">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -23,7 +23,7 @@ export default function FounderStory() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="relative aspect-[4/5] max-w-[150px] md:max-w-sm mx-auto lg:mx-0">
+          <div className="relative aspect-[4/5] max-w-[250px] md:max-w-sm mx-auto lg:mx-0">
             <div className="absolute inset-0 organic-blob bg-gradient-to-br from-blush/40 to-sage/20 rotate-3" />
             <div className="absolute inset-[5%] organic-blob overflow-hidden shadow-soft">
               <img

@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="absolute -top-24 -left-32 w-[420px] h-[420px] bg-sage/15 organic-blob blur-2xl" />
       <div className="absolute bottom-0 right-0 w-[380px] h-[380px] bg-blush/25 organic-blob blur-2xl" />
 
-      <div className="container-custom relative grid grid-cols-[1.15fr_0.85fr] lg:grid-cols-[1.1fr_0.9fr] gap-5 md:gap-10 lg:gap-14 items-center">
+      <div className="container-custom relative grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 md:gap-10 lg:gap-14 items-center">
         <motion.div style={{ y: textY, opacity }}>
           <motion.span
             initial={{ opacity: 0, y: 12 }}
@@ -65,7 +65,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.55 }}
-            className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:gap-4"
+            className="flex flex-row items-center gap-2 sm:gap-4"
           >
             <a
               href="#offerings"
@@ -73,7 +73,7 @@ export default function Hero() {
                 e.preventDefault();
                 document.querySelector("#offerings")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="btn-primary justify-center px-3 py-2.5 text-xs sm:px-7 sm:py-3.5 sm:text-[15px]"
+              className="btn-primary flex-1 justify-center px-2 py-2.5 text-[11px] sm:flex-none sm:px-7 sm:py-3.5 sm:text-[15px]"
             >
               Explore Products
             </a>
@@ -81,7 +81,7 @@ export default function Hero() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp justify-center px-3 py-2.5 text-xs sm:px-7 sm:py-3.5 sm:text-[15px]"
+              className="btn-whatsapp flex-1 justify-center px-2 py-2.5 text-[11px] sm:flex-none sm:px-7 sm:py-3.5 sm:text-[15px]"
             >
               <MessageCircle size={17} />
               Contact on WhatsApp
@@ -96,7 +96,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="relative aspect-[5/4] md:aspect-[4/5] max-w-[280px] md:max-w-md mx-auto">
+          <div className="relative aspect-[5/4] md:aspect-[4/5] max-w-[260px] md:max-w-md mx-auto">
             <div className="absolute inset-0 organic-blob bg-gradient-to-br from-sage-light/40 via-blush/30 to-forest/10" />
             <div className="absolute inset-[6%] organic-blob overflow-hidden shadow-soft">
               <img
