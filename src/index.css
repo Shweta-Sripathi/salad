@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFF8F2;
+  color: #1F2937;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #E8C7C8;
+  color: #213B24;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #A9C1A3;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A9B76;
+}
+
+@layer utilities {
+  .container-custom {
+    @apply mx-auto w-full max-w-[1240px] px-6 md:px-10;
+  }
+
+  .section-label {
+    @apply font-display italic text-sage-light text-lg md:text-xl mb-3 block;
+  }
+
+  .heading-xl {
+    @apply font-display font-medium text-forest leading-[1.05] tracking-[-0.01em];
+  }
+
+  .heading-lg {
+    @apply font-display font-medium text-forest leading-[1.1] tracking-[-0.01em];
+  }
+
+  .body-text {
+    @apply font-body text-ink/80 leading-relaxed;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-forest text-cream px-7 py-3.5 rounded-full font-body font-medium text-[15px] shadow-glow transition-all duration-300 hover:bg-forest-deep hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-transparent border border-forest/30 text-forest px-7 py-3.5 rounded-full font-body font-medium text-[15px] transition-all duration-300 hover:border-forest hover:bg-forest/5;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center gap-2 bg-[#25D366] text-white px-7 py-3.5 rounded-full font-body font-medium text-[15px] shadow-[0_12px_30px_-10px_rgba(37,211,102,0.6)] transition-all duration-300 hover:brightness-95 hover:-translate-y-0.5;
+  }
+
+  .organic-blob {
+    border-radius: 62% 38% 55% 45% / 45% 40% 60% 55%;
+  }
+
+  .grain-overlay {
+    @apply pointer-events-none absolute inset-0 bg-grain;
+  }
+}
