@@ -58,7 +58,7 @@ export default function HealthBenefits() {
           </motion.h2>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-5">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-5">
           {BENEFITS.map((b, i) => {
             const Icon = b.icon;
             return (
@@ -69,13 +69,14 @@ export default function HealthBenefits() {
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.6, delay: i * 0.08 }}
                 whileHover={{ y: -5 }}
-                className="rounded-3xl bg-cream/10 border border-cream/10 backdrop-blur-sm p-6 flex flex-col gap-4"
+                className="rounded-2xl md:rounded-3xl bg-cream/10 border border-cream/10 backdrop-blur-sm p-3 md:p-6 flex flex-col gap-2 md:gap-4"
               >
-                <div className="w-11 h-11 rounded-full bg-blush/90 flex items-center justify-center">
-                  <Icon size={20} className="text-forest-deep" />
+                <div className="w-8 h-8 md:w-11 md:h-11 rounded-full bg-blush/90 flex items-center justify-center">
+                  <Icon size={16} className="text-forest-deep md:hidden" />
+                  <Icon size={20} className="text-forest-deep hidden md:block" />
                 </div>
-                <h3 className="font-display text-cream text-xl">{b.title}</h3>
-                <p className="font-body text-cream/70 text-sm leading-relaxed">{b.desc}</p>
+                <h3 className="font-display text-cream text-sm md:text-xl">{b.title}</h3>
+                <p className="font-body text-cream/70 text-[11px] md:text-sm leading-relaxed">{b.desc}</p>
               </motion.div>
             );
           })}

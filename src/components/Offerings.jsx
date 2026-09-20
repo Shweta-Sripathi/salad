@@ -10,7 +10,7 @@ function ProductCard({ item }) {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
       whileHover={{ y: -6 }}
-      className="relative rounded-[26px] overflow-hidden shadow-card group aspect-[3/2] md:aspect-[4/5]"
+      className="relative rounded-[20px] overflow-hidden shadow-card group aspect-[3/2] md:rounded-[26px] md:aspect-[4/5]"
     >
       <motion.img
         layoutId={`card-img-${item.id}`}
@@ -19,11 +19,11 @@ function ProductCard({ item }) {
         className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/90 via-forest-deep/10 to-transparent" />
-      <div className="relative h-full flex flex-col justify-end p-6">
-        <span className="font-display italic text-cream/70 text-sm mb-1">
+      <div className="relative h-full flex flex-col justify-end p-3 md:p-6">
+        <span className="font-display italic text-cream/70 text-[11px] md:text-sm mb-1">
           {item.tagline}
         </span>
-        <h3 className="font-display text-cream text-xl md:text-2xl">{item.name}</h3>
+        <h3 className="font-display text-cream text-sm md:text-2xl">{item.name}</h3>
       </div>
     </motion.div>
   );
@@ -36,15 +36,15 @@ function UpcomingCard() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
-      className="relative rounded-[26px] border-2 border-dashed border-forest/25 bg-forest/[0.03] aspect-[3/2] md:aspect-[4/5] flex flex-col items-center justify-center text-center p-4 md:p-8"
+      className="relative rounded-[20px] border-2 border-dashed border-forest/25 bg-forest/[0.03] aspect-[3/2] md:rounded-[26px] md:aspect-[4/5] flex flex-col items-center justify-center text-center p-3 md:p-8"
     >
       <span className="relative flex h-3 w-3 mb-5">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blush-deep opacity-60" />
         <span className="relative inline-flex rounded-full h-3 w-3 bg-blush-deep" />
       </span>
-      <Sparkles size={26} className="text-sage mb-4" />
-      <h3 className="font-display text-forest text-xl mb-2">More on the way</h3>
-      <p className="font-body text-ink/60 text-sm max-w-[220px]">
+      <Sparkles size={20} className="text-sage mb-2 md:mb-4 md:w-[26px] md:h-[26px]" />
+      <h3 className="font-display text-forest text-sm md:text-xl mb-1 md:mb-2">More on the way</h3>
+      <p className="font-body text-ink/60 text-[11px] md:text-sm max-w-[220px]">
         New varieties are joining the menu soon — message us on
         WhatsApp to be the first to know.
       </p>
@@ -91,7 +91,9 @@ export default function Offerings() {
                 </div>
                 <div
                   className={`grid gap-5 ${
-                    cols <= 2 ? "sm:grid-cols-2 max-w-xl" : "md:grid-cols-3 lg:grid-cols-4"
+                    cols <= 2
+                      ? "grid-cols-2 gap-3 md:gap-5 sm:max-w-xl"
+                      : "grid-cols-2 gap-3 md:grid-cols-3 md:gap-5 lg:grid-cols-4"
                   }`}
                 >
                   {items.map((item) => (
