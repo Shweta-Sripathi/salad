@@ -4,7 +4,7 @@ import { Flame, Sparkles } from "lucide-react";
 export default function FoundersKitchen() {
   return (
     <section className="relative py-20 md:py-24 bg-cream-deep overflow-hidden">
-      <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center">
+      <div className="container-custom grid grid-cols-[1.15fr_0.85fr] lg:grid-cols-2 gap-4 md:gap-10 items-center">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -39,11 +39,11 @@ export default function FoundersKitchen() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="aspect-[4/3] md:aspect-auto rounded-3xl overflow-hidden shadow-card mt-8"
+              className="aspect-[4/3] md:aspect-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-card mt-4 md:mt-8"
             >
               <img
                 src="/offerings/fresh-prep.jpg"
@@ -54,7 +54,7 @@ export default function FoundersKitchen() {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
-              className="aspect-[4/3] md:aspect-auto rounded-3xl overflow-hidden shadow-card"
+              className="aspect-[4/3] md:aspect-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-card"
             >
               <img
                 src="/offerings/careful-packaging.jpg"

@@ -25,7 +25,14 @@ export default function Navbar() {
 
   const handleNav = (href) => {
     setOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    requestAnimationFrame(() => {
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      const headerOffset = 80;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+    });
   };
 
   return (
